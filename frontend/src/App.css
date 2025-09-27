@@ -997,6 +997,17 @@
   box-shadow: 0 4px 16px rgba(26, 143, 152, 0.3);
 }
 
+.header-action-btn {
+  background: rgba(26, 143, 152, 0.1) !important;
+  border: 2px solid rgba(26, 143, 152, 0.2) !important;
+  color: #1A8F98 !important;
+}
+
+.header-action-btn:hover {
+  background: #1A8F98 !important;
+  color: white !important;
+}
+
 .dashboard-content {
   display: flex;
   gap: 1.5rem;
