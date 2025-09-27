@@ -86,7 +86,7 @@ const LandingPage = () => {
             return (
               <Card key={feature.id} className="feature-card">
                 <CardContent className="card-content">
-                  <h3 className="card-title">{feature.title.replace(' ', '<br />')}</h3>
+                  <h3 className="card-title" dangerouslySetInnerHTML={{__html: feature.title.replace(/\s(?=\w+$)/, '<br />')}}></h3>
                   <div className="card-icon-wrapper">
                     <div className="card-icon">
                       <IconComponent className="w-6 h-6" />
