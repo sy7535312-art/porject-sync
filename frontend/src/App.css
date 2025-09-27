@@ -1194,16 +1194,19 @@
 .book-btn {
   background: #1A8F98;
   color: white;
-  border-radius: 12px;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
+  border-radius: 16px;
+  padding: 0.875rem 2rem;
+  font-weight: 700;
+  font-size: 0.95rem;
   border: none;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(26, 143, 152, 0.4);
 }
 
 .book-btn:hover {
   background: #1599a8;
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(26, 143, 152, 0.5);
 }
 
 .placeholder-content {
