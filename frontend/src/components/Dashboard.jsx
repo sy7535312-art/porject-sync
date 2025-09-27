@@ -30,13 +30,13 @@ const Dashboard = () => {
         <div className="user-info">
           <div className="user-avatar">
             <img 
-              src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=50&h=50&fit=crop&crop=face" 
+              src={userProfile.avatar} 
               alt="User Avatar" 
             />
           </div>
           <div className="user-details">
-            <div className="greeting">Hi, Sam-yuk</div>
-            <div className="user-role">Traveller</div>
+            <div className="greeting">{userProfile.greeting}</div>
+            <div className="user-role">{userProfile.role}</div>
           </div>
         </div>
 
