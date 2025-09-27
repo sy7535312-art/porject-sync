@@ -46,10 +46,10 @@ const Dashboard = () => {
         </div>
 
         <div className="header-actions">
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="header-action-btn">
             <Search className="w-5 h-5" />
           </Button>
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="header-action-btn">
             <Bell className="w-5 h-5" />
           </Button>
         </div>
