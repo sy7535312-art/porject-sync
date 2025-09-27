@@ -78,49 +78,24 @@ const LandingPage = () => {
         <div className="airplane-path">✈️</div>
         
         <div className="cards">
-          <Card className="feature-card">
-            <CardContent className="card-content">
-              <h3 className="card-title">Sync<br />Travel Dates</h3>
-              <div className="card-icon-wrapper">
-                <div className="card-icon">
-                  <CalendarDays className="w-6 h-6" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className="feature-card">
-            <CardContent className="card-content">
-              <h3 className="card-title">Explore<br />Destinations</h3>
-              <div className="card-icon-wrapper">
-                <div className="card-icon">
-                  <Globe className="w-6 h-6" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className="feature-card">
-            <CardContent className="card-content">
-              <h3 className="card-title">Find Travel<br />Buddies</h3>
-              <div className="card-icon-wrapper">
-                <div className="card-icon">
-                  <Users className="w-6 h-6" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className="feature-card">
-            <CardContent className="card-content">
-              <h3 className="card-title">Affordable<br />Stays</h3>
-              <div className="card-icon-wrapper">
-                <div className="card-icon">
-                  <Home className="w-6 h-6" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          {features.map((feature) => {
+            const IconComponent = feature.icon === "CalendarDays" ? CalendarDays :
+                               feature.icon === "Globe" ? Globe :
+                               feature.icon === "Users" ? Users : Home;
+            
+            return (
+              <Card key={feature.id} className="feature-card">
+                <CardContent className="card-content">
+                  <h3 className="card-title">{feature.title.replace(' ', '<br />')}</h3>
+                  <div className="card-icon-wrapper">
+                    <div className="card-icon">
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </section>
 
