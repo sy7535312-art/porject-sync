@@ -60,16 +60,29 @@ const Dashboard = () => {
         {/* Sidebar */}
         <aside className="sidebar">
           <nav className="sidebar-nav">
-            {sidebarItems.map((item) => (
-              <button
-                key={item.id}
-                className={`sidebar-item ${activeTab === item.id ? 'active' : ''}`}
-                onClick={() => setActiveTab(item.id)}
-              >
-                <item.icon className="sidebar-icon" />
-                <span className="sidebar-label">{item.label}</span>
-              </button>
-            ))}
+            {sidebarItems.map((item) => {
+              const IconComponent = item.icon === "LayoutDashboard" ? LayoutDashboard :
+                                 item.icon === "Plane" ? Plane :
+                                 item.icon === "MapPin" ? MapPin :
+                                 item.icon === "Calendar" ? Calendar :
+                                 item.icon === "Users" ? Users :
+                                 item.icon === "Calculator" ? Calculator :
+                                 item.icon === "Building" ? Building :
+                                 item.icon === "MessageSquare" ? MessageSquare :
+                                 item.icon === "UserPlus" ? UserPlus :
+                                 item.icon === "Settings" ? Settings : HelpCircle;
+              
+              return (
+                <button
+                  key={item.id}
+                  className={`sidebar-item ${activeTab === item.id ? 'active' : ''}`}
+                  onClick={() => setActiveTab(item.id)}
+                >
+                  <IconComponent className="sidebar-icon" />
+                  <span className="sidebar-label">{item.label}</span>
+                </button>
+              );
+            })}
             <button className="sidebar-item logout">
               <LogOut className="sidebar-icon" />
               <span className="sidebar-label">Log Out</span>
