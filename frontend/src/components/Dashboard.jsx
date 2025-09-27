@@ -101,9 +101,11 @@ const Dashboard = () => {
                     <SelectValue placeholder="Interest" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="adventure">Adventure</SelectItem>
-                    <SelectItem value="cultural">Cultural</SelectItem>
-                    <SelectItem value="beach">Beach</SelectItem>
+                    {filterOptions.interests.map(interest => (
+                      <SelectItem key={interest.value} value={interest.value}>
+                        {interest.label}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
 
@@ -112,9 +114,11 @@ const Dashboard = () => {
                     <SelectValue placeholder="Date" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="thisMonth">This Month</SelectItem>
-                    <SelectItem value="nextMonth">Next Month</SelectItem>
-                    <SelectItem value="custom">Custom</SelectItem>
+                    {filterOptions.dates.map(date => (
+                      <SelectItem key={date.value} value={date.value}>
+                        {date.label}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
 
@@ -123,9 +127,11 @@ const Dashboard = () => {
                     <SelectValue placeholder="Location" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="domestic">Domestic</SelectItem>
-                    <SelectItem value="international">International</SelectItem>
-                    <SelectItem value="any">Any</SelectItem>
+                    {filterOptions.locations.map(location => (
+                      <SelectItem key={location.value} value={location.value}>
+                        {location.label}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>
