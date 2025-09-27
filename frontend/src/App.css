@@ -1134,16 +1134,19 @@
 }
 
 .destination-card {
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s;
-  border: none;
+  box-shadow: 0 12px 40px rgba(26, 143, 152, 0.15);
+  transition: all 0.4s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
 }
 
 .destination-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(26, 143, 152, 0.25);
+  border-color: rgba(26, 143, 152, 0.3);
 }
 
 .destination-content {
