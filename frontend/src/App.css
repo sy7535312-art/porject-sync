@@ -940,14 +940,17 @@
 }
 
 .user-details .greeting {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #333;
+  letter-spacing: -0.3px;
 }
 
 .user-details .user-role {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.95rem;
+  color: #1A8F98;
+  font-weight: 500;
+  margin-top: 2px;
 }
 
 .brand-section {
