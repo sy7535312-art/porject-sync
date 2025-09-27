@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { 
   LayoutDashboard, 
   MapPin, 
@@ -16,12 +15,71 @@ import {
   HelpCircle, 
   LogOut,
   Search,
-  Bell
+  Bell,
+  Plus,
+  Share2,
+  Edit3
 } from "lucide-react";
-import { sidebarItems, internationalDestinations, indianDestinations, userProfile, filterOptions } from "../data/mock";
 
 const Dashboard = () => {
-  const [activeTab, setActiveTab] = useState("explore");
+  const [activeSection, setActiveSection] = useState("trips");
+  const [activeToggle, setActiveToggle] = useState("created");
+
+  const sidebarItems = [
+    { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
+    { id: "explore", label: "Explore Trips", icon: Plane },
+    { id: "trips", label: "My Trips", icon: MapPin, active: true },
+    { id: "calendar", label: "Calendar Sync", icon: Calendar },
+    { id: "buddies", label: "Travel Buddies", icon: Users },
+    { id: "budget", label: "Budget & Planner", icon: Calculator },
+    { id: "stays", label: "Stay Options", icon: Building },
+    { id: "groups", label: "Group & Forums", icon: MessageSquare },
+    { id: "invite", label: "Invite Friends", icon: UserPlus },
+    { id: "settings", label: "Account Settings", icon: Settings },
+    { id: "help", label: "Help & Support", icon: HelpCircle },
+  ];
+
+  const internationalDestinations = [
+    {
+      id: 1,
+      name: "Bali Gateway",
+      image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxiYWxpfGVufDB8fHx8MTc1ODk3MDQ2Nnww&ixlib=rb-4.1.0&q=85",
+      dateRange: "12-03-2025 to 20-03-2025"
+    },
+    {
+      id: 2,
+      name: "Switzerland",
+      image: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxzd2l0emVybGFuZHxlbnwwfHx8fDE3NTg5NzA0Njd8MA&ixlib=rb-4.1.0&q=85",
+      dateRange: "05-04-2025 to 18-04-2025"
+    },
+    {
+      id: 3,
+      name: "Bali Rice Terraces",
+      image: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxiYWxpfGVufDB8fHx8MTc1ODk3MDQ2Nnww&ixlib=rb-4.1.0&q=85",
+      dateRange: "28-02-2025 to 08-03-2025"
+    }
+  ];
+
+  const indianDestinations = [
+    {
+      id: 1,
+      name: "Red Fort Heritage",
+      image: "https://images.unsplash.com/photo-1705861144413-f02e38354648?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxyZWQlMjBmb3J0fGVufDB8fHx8MTc1ODk3MDQ2OHww&ixlib=rb-4.1.0&q=85",
+      dateRange: "15-01-2025 to 17-01-2025"
+    },
+    {
+      id: 2,
+      name: "Varanasi Ghats",
+      image: "https://images.unsplash.com/photo-1561361058-c24cecae35ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHx2YXJhbmFzaXxlbnwwfHx8fDE3NTg5NzA0Njh8MA&ixlib=rb-4.1.0&q=85",
+      dateRange: "22-02-2025 to 25-02-2025"
+    },
+    {
+      id: 3,
+      name: "Golden Temple",
+      image: "https://images.unsplash.com/photo-1685790582503-1b2762d95407?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxyZWQlMjBmb3J0fGVufDB8fHx8MTc1ODk3MDQ2OHww&ixlib=rb-4.1.0&q=85",
+      dateRange: "10-03-2025 to 13-03-2025"
+    }
+  ];
 
   return (
     <div className="dashboard">
