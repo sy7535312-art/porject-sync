@@ -16,56 +16,12 @@ import {
   HelpCircle, 
   LogOut,
   Search,
-  Bell,
-  ChevronDown
+  Bell
 } from "lucide-react";
+import { sidebarItems, internationalDestinations, indianDestinations, userProfile, filterOptions } from "../data/mock";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("explore");
-
-  const sidebarItems = [
-    { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
-    { id: "explore", label: "Explore Trips", icon: Plane, active: true },
-    { id: "trips", label: "My Trips", icon: MapPin },
-    { id: "calendar", label: "Calendar Sync", icon: Calendar },
-    { id: "buddies", label: "Travel Buddies", icon: Users },
-    { id: "budget", label: "Budget & Planner", icon: Calculator },
-    { id: "stays", label: "Stay Options", icon: Building },
-    { id: "groups", label: "Group & forums", icon: MessageSquare },
-    { id: "invite", label: "Invite friends", icon: UserPlus },
-    { id: "settings", label: "Account settings", icon: Settings },
-    { id: "help", label: "Help & Support", icon: HelpCircle },
-  ];
-
-  const internationalDestinations = [
-    {
-      name: "Bali",
-      image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxiYWxpfGVufDB8fHx8MTc1ODk3MDQ2Nnww&ixlib=rb-4.1.0&q=85"
-    },
-    {
-      name: "Switzerland", 
-      image: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxzd2l0emVybGFuZHxlbnwwfHx8fDE3NTg5NzA0Njd8MA&ixlib=rb-4.1.0&q=85"
-    },
-    {
-      name: "Bali",
-      image: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxiYWxpfGVufDB8fHx8MTc1ODk3MDQ2Nnww&ixlib=rb-4.1.0&q=85"
-    }
-  ];
-
-  const indianDestinations = [
-    {
-      name: "Red Fort",
-      image: "https://images.unsplash.com/photo-1705861144413-f02e38354648?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxyZWQlMjBmb3J0fGVufDB8fHx8MTc1ODk3MDQ2OHww&ixlib=rb-4.1.0&q=85"
-    },
-    {
-      name: "Banaras",
-      image: "https://images.unsplash.com/photo-1561361058-c24cecae35ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHx2YXJhbmFzaXxlbnwwfHx8fDE3NTg5NzA0Njh8MA&ixlib=rb-4.1.0&q=85"
-    },
-    {
-      name: "Red Fort",
-      image: "https://images.unsplash.com/photo-1685790582503-1b2762d95407?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxyZWQlMjBmb3J0fGVufDB8fHx8MTc1ODk3MDQ2OHww&ixlib=rb-4.1.0&q=85"
-    }
-  ];
 
   return (
     <div className="dashboard">
