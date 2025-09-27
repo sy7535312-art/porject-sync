@@ -56,10 +56,10 @@ const LandingPage = () => {
           <div className="hero-images-container">
             <div className="image-group">
               <div className="top-image">
-                <img src="https://images.unsplash.com/photo-1603979649806-5299879db16b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxha2V8ZW58MHx8fHwxNzU4OTcwNDY2fDA&ixlib=rb-4.1.0&q=85" alt="Mountain Lake" />
+                <img src={heroImages.topImage} alt="Mountain Lake" />
               </div>
               <div className="bottom-image">
-                <img src="https://images.unsplash.com/photo-1658434061692-c763f2b6be8e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxiZWFjaCUyMGNvYXN0fGVufDB8fHx8MTc1ODk3MDQ3MXww&ixlib=rb-4.1.0&q=85" alt="Coastal View" />
+                <img src={heroImages.bottomImage} alt="Coastal View" />
               </div>
               <div className="calendar-icon-wrap">
                 <div className="calendar-icon">
