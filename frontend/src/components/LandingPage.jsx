@@ -3,30 +3,10 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { CalendarDays, Globe, Users, Home, Star } from "lucide-react";
+import { testimonials, features, heroImages } from "../data/mock";
 
 const LandingPage = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  const testimonials = [
-    {
-      name: "Taylor",
-      review: "Our experience with Sync & Explore has been exceptional. The platform's ability to seamlessly match travel buddies and plan AI-powered itineraries made trip planning effortless. This smart and dependable tool has added great value to our travel journey, making exploration more exciting and stress-free.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=200&h=200&fit=crop&crop=face"
-    },
-    {
-      name: "Sarah",
-      review: "Amazing platform! I found the perfect travel companion for my Europe trip. The AI recommendations were spot-on and helped us discover hidden gems we never would have found otherwise. Highly recommend this to any solo traveler looking for adventure.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
-    },
-    {
-      name: "Michael", 
-      review: "Sync & Explore revolutionized how I plan my trips. The ability to sync schedules with other travelers and get personalized recommendations based on our shared interests made our group trip to Japan absolutely incredible. Five stars!",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
-    }
-  ];
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
