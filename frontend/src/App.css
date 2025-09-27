@@ -990,8 +990,10 @@
 
 .dashboard-content {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 0 1.5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .sidebar {
