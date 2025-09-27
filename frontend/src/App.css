@@ -977,18 +977,21 @@
 }
 
 .header-actions button {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: #F8F9FA;
-  border: 1px solid #E9ECEF;
+  background: rgba(26, 143, 152, 0.1);
+  border: 2px solid rgba(26, 143, 152, 0.2);
   color: #1A8F98;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .header-actions button:hover {
   background: #1A8F98;
   color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(26, 143, 152, 0.3);
 }
 
 .dashboard-content {
