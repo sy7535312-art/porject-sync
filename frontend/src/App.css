@@ -1125,7 +1125,15 @@
 
 .view-all-btn {
   color: #1A8F98;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.view-all-btn:hover {
+  background: rgba(26, 143, 152, 0.1);
+  transform: translateX(4px);
 }
 
 .destinations-grid {
