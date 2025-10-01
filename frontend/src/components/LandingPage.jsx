@@ -26,14 +26,12 @@ const LandingPage = () => {
     <div className="landing-page">
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="logo-position">
-          <div className="logo">S&E</div>
-        </div>
+
         
         <nav className="nav-bar-wrapper">
           <ul className="nav-list">
             <li><a href="#home">Home</a></li>
-            <li><Link to="/dashboard">Features</Link></li>
+            <li><a href="#features">Features</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -155,9 +153,7 @@ const LandingPage = () => {
           
           <div className="airplane">✈️</div>
           
-          <div className="logo-row">
-            Sync & Explore Logo
-          </div>
+
         </div>
         
         <div className="waitlist-right">
